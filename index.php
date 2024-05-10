@@ -1,5 +1,4 @@
 <?php
-include_once __DIR__ . '/db.php';
 require_once __DIR__ . '/includes/header.php';
 include_once __DIR__ . '/translations.php';
 
@@ -23,7 +22,7 @@ $news = $stmt->fetchAll();
                 
         { ?>
         <div class="col-sm-6 mb-3 mb-sm-0">
-            <div class="card">
+            <div class="card col">
                 <div class="card-body">
                     <h5 class="card-title"><?= $row['Title'] ?></h5>
                     <p class="card-text"><?= $row['Description'] ?>

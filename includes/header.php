@@ -50,6 +50,7 @@ if (!isset($_COOKIE['language'])) {
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
     defer></script>
     <link rel="stylesheet" href="assets/<?= $isLight ? 'style.light.css' : 'style.dark.css' ?>" />
+    <script src="assets/scripts.js" defer></script>
 </head>
 
 <body>
@@ -69,13 +70,13 @@ if (!isset($_COOKIE['language'])) {
                     </li>
                 </ul>
                 
-                <form action="<?= SITE_URL . '/change-language.php' ?>" method="get">
-                    <select name="language">
+                <form id="change-language" action="<?= SITE_URL . '/change-language.php' ?>" method="get">
+                    <select id="select-language" name="language">
                         <option value="it"<?= $language === 'it' ? ' selected' : '' ?>>IT</option>
                         <option value="en"<?= $language === 'en' ? ' selected' : '' ?>>EN</option>
                         <option value="fr"<?= $language === 'fr' ? ' selected' : '' ?>>FR</option>
                     </select>
-                    <button class="btn btn-primary"><?= $labels[$language]['save_btn'] ?></button>
+                   <!--  <button class="btn btn-primary"><?= $labels[$language]['save_btn'] ?></button> -->
                 </form>
             </div>
         </div>
