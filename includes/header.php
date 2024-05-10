@@ -3,6 +3,11 @@ include_once __DIR__ . '/constants.php';
 include_once __DIR__ . '/translations.php';
 include_once __DIR__ . '/db.php';
 
+$stmt = $pdo->query("SELECT * FROM News_It");
+$newsIt = $stmt->fetchAll(); 
+$stmt = $pdo->query("SELECT * FROM News_En");
+$newsEn = $stmt->fetchAll(); 
+
 // echo '<pre>' . print_r($_SERVER, true) . '</pre>'; 
 
 // cambiare tema
