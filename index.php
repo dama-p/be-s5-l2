@@ -26,7 +26,9 @@ $news = $stmt->fetchAll();
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title"><?= $row['Title'] ?></h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                    <p class="card-text"><?= $row['Description'] ?>
+                    </p>
+                    <p class="card-text"><?= $row['Author'] ?>
                     </p>
                     <a href="#" class="btn btn-primary"><?= $labels[$language]['details_btn'] ?></a>
                 </div>
